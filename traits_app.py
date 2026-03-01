@@ -256,18 +256,18 @@ if compare_clicked:
     )
 
     # --- BIG CODE BOX WITH NATIVE COPY ---
-    st.markdown('<div class="big-code-box">', unsafe_allow_html=True)
-    st.code(prompt, language="markdown")
-    st.markdown('</div>', unsafe_allow_html=True)
+st.markdown('<div class="big-code-box">', unsafe_allow_html=True)
+st.code(prompt, language="markdown")
+st.markdown('</div>', unsafe_allow_html=True)
 
-    # --- COPILOT BUTTON ---
-    encoded_prompt = urllib.parse.quote(prompt)
-    copilot_url = f"https://copilot.microsoft.com/?q={encoded_prompt}"
+# --- COPILOT BUTTON ---
+encoded_prompt = urllib.parse.quote(prompt)
+copilot_url = f"https://copilot.microsoft.com/?q={encoded_prompt}"
 
-    st.markdown(
-        f'<div class="copilot-btn"><a href="{copilot_url}" target="_blank">Open in Copilot</a></div>',
-        unsafe_allow_html=True
-    )
+st.markdown(
+    f'<div class="copilot-btn"><a href="{copilot_url}" target="_blank">Open in Copilot</a></div>',
+    unsafe_allow_html=True
+)
 
 # ---------------------------------------------------------
 # FOOTER
